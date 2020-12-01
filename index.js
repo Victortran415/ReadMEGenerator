@@ -25,10 +25,20 @@ const questions = [
         name: "usage"
     },
     {
-        type: "input",
+        type: "list",
         message: "License for your project",
         choices:  ['Apache License', ' MIT License', ' Mozilla Public License 2.0', ' GPL License'],
         name: "license"
+    },
+    {
+        type: "input",
+        message: "Who contributed in this Project?",
+        name: "contribution"
+    },
+    {
+        type: "input",
+        message: "If anything was tested, what was it?",
+        name: "test"
     },
     {
         type: "input",
@@ -37,24 +47,30 @@ const questions = [
     },
     {
         type: "input",
-        message: "Enter your email addrerss",
+        message: "Enter your email address",
         name: "contact"
     },
 ];
 
-//NOTE: will get back to this.
 // function to write README file
 function writeToFile(fileName, data) {
     fs.watchFile(fileName, data, (err) => {
-        if (err) throw (err);
-        console.log("testing")
+        if (err) {
+            return console.log(err)
+        }
+        console.log("NO ERR!!")
     })
 }
 
 
 // function to initialize program
-function init() {
-
+async function init() {
+    try {
+        const response = await inquirer.prompt(questions);
+        console.log(response);
+    } catch (err) {
+        console.log(err)
+    }
 }
 
 // function call to initialize program
