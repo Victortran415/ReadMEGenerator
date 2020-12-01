@@ -1,13 +1,18 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
+const util = require('util')
+const generateMarkdown = require("./utils/generateMarkdown.js")
+
+
 // array of questions for user
+
 
 //UPDATE: questions changed to something related to a high-quality readMe.
 const questions = [
     {
         type: "input",
         message: "What is the title of your project?",
-        name: "projectInput"
+        name: "projectTitle"
     },
     {
         type: "input",
@@ -62,12 +67,17 @@ function writeToFile(fileName, data) {
     })
 }
 
+const writeFile = util.promisify(writeToFile)
 
 // function to initialize program
 async function init() {
     try {
         const response = await inquirer.prompt(questions);
         console.log(response);
+
+        const markdown = generateMarkdown(response)
+        //create a markdown file
+        await writeFile("DemoReadMe.md", markdown)
     } catch (err) {
         console.log(err)
     }
