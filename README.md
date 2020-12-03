@@ -43,4 +43,3 @@ No current testing at the moment.
 - Email: victortran415@gmail.com
 
 
-© 2020 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
