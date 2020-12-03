@@ -19,7 +19,12 @@ To create this application, you would have to run `npm install` which will provi
  - `inquirer` will capture user response in the commmand-line.
 
 ## Usage:
-A video demo of how this application operates.
+Providing steps on how application operates. Making sure to add a video demo as well. 
+- After cloning this repo, you can run node index.js.
+- List of questions will appear on the command-line.
+- Once the User complete all the questions, the application will then create a new `readMe.md` file.
+
+
 
 
 ## License:
