@@ -1,65 +1,37 @@
+
 // function to generate markdown for README
 function generateMarkdown(response) {
-  //Title
-  `# ${response.projectTitle}
-
+  return `
+  # ${response.projectTitle}
 
   ## Description
-  ${response.description}`
+    ${response.description}
 
-  //Time of Content(installation, usage, license, contribution, tests, questions)
+  ## Time of Contents
+    - [Installation](#installation)- [Usage](#usage)
+    - [License](#license)
+    - [Contribution](#contribution)
+    - [Tests](#tests)
+    - [Questions](#questions)
+  
+  ## Installation:
+    ${response.installation}
 
-  //NOTE: may be doing this incorrectly, i'll get back to it.
-  let ToC = `## Time of Contents`
-  if (response.installation) {
-    ToC += `- [Installation](#installation)`;
-  }
-  if (response.usage) {
-    ToC += `- [Usage](#usage)`;
-  }
-  if (response.license) {
-    ToC += `- [License](#license)`
-  } else {
-    ToC
-  }
-  if (response.contribution) {
-    ToC += `- [Contribution](#contribution)`;
-  }
-  if (response.tests) {
-    ToC += `- [Tests](#tests)`;
-  }
-  if (response.contact) {
-    ToC += `- [Contact](#contact)`
-  }
-  console.log(ToC)
+  ## Usage:
+    ${response.usage}
 
-  //Installations
-  `## Installation:
-  ${response.installation}`
+  ## License
+    ${response.license}
 
-  //Usage
+  ## Contribution
+    ${response.contribution}
 
-  `## Usage:
-  ${response.usage}`
+  ## Tests
+    ${response.tests}
 
-  //License
-  `## License
-  ${response.license}`
+  ## Questions
+    ${response.questions}`
 
-  //Contribution
-  `## Contribution
-  ${response.contribution}`
-
-  //Tests
-  `## Tests
-  ${response.tests}`
-
-  //Questions
-  `## Questions
-  ${response.contact}`
-
-
-return response
 }
 
 module.exports = generateMarkdown;
