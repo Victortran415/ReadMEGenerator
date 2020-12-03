@@ -19,18 +19,28 @@ To create this application, you would have to run `npm install` which will provi
  - `inquirer` will capture user response in the commmand-line.
 
 ## Usage:
+A video demo of how this application operates.
 
 
 ## License:
 - MIT License
 
 ## Contribution:
-
+Contributors that has gathered ideas to create this application during a study session:
+- Victor Tran
+- Geoffrey Jang
+- Cameron Wright
+- Andre Smith
+- Lea Wilhelmer
 
 ## Tests:
 
+No current testing at the moment.
 
-## Questions:
+
+## Questions?:
+- GitHub: https://github.com/Victortran415
+- Email: victortran415@gmail.com
 
 
 © 2020 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
