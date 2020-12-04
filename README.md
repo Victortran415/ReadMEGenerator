@@ -24,7 +24,7 @@ Providing steps on how application operates. Making sure to add a video demo as 
 - List of questions will appear on the command-line.
 - Once the User complete all the questions, the application will then create a new `readMe.md` file.
 
-
+<img src= "assets/gif/demoreadme.gif">
 
 
 ## License:

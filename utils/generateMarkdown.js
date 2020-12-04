@@ -29,7 +29,7 @@ function generateMarkdown(response) {
   ## Tests
     ${response.tests}
 
-  ## Questions
+  ## Questions?
     ${response.questions}`
 
 }

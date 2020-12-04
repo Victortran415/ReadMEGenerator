@@ -44,7 +44,7 @@ function promptQuestion() {
     {
         type: "input",
         message: "If anything was tested, what was it?",
-        name: "test"
+        name: "tests"
     },
     {
         type: "input",
